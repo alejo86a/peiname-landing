@@ -927,7 +927,7 @@ p.tagline, .address-detail a.tagline {
       font-size: 13px; }
 
   .logo img {
-    width: 50px; } }
+    width: 50px;  } }
 @media only screen and (max-width: 973px) {
   .copyright .social-icons {
     padding-bottom: 12px; } }
