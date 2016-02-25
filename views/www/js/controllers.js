@@ -33,7 +33,7 @@ app.controller('ContactController', function ($scope, $http) {
             });
             */
             
-            $http.post('https://peinamebackend-cposada23.c9users.io/api/contactos/create', $scope.formData).success(function (data) {
+            $http.post('http://www.peiname.me/api/contactos/create', $scope.formData).success(function (data) {
                 console.log(JSON.stringify(data));
                 
                 $scope.submitButtonDisabled = false;
