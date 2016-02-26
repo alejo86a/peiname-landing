@@ -11,9 +11,9 @@
         // Default options.
         var settings = $.extend({
         	// Error and success message strings
-            msgError404: "Service is not available at the moment. Please check your internet connection or try again later.",
-			msgError503: "Oops. Looks like something went wrong. Please try again later.",
-			msgErrorValidation: "This email address looks fake or invalid. Please enter a real email address.",
+            msgError404: "El servicio no esta disponible en este momento. Por favor revisa tu conexion a internet e intenta mas tarde.",
+			msgError503: "Oops. Parece que tenemos un error. Por favor intenta mas tarde.",
+			msgErrorValidation: "Este email parece falso o invalido. Por favor ingresa un email real.",
 			msgErrorFormat: "Tu email es incorrecto.",
 			msgSuccess: "Felicidades! Te avisaremos apenas este disponible."
 		}, options );
@@ -50,7 +50,7 @@
 	
 				$.ajax({
 					type: "POST",
-					url: action,
+					url: "https://peinamebackend-cposada23.c9users.io/api/correos/create",
 					data: {email: email},
 					dataType: "json",
 					error: function(data){
@@ -93,7 +93,14 @@
 						if (data.type == "ValidationError") { 
 							message.text(settings.msgErrorValidation);$('input').val("");
 						} else {
-							message.text(settings.msgError503);
+							
+						// Add success class to form
+						$this.addClass("success");
+							icon.removeClass();
+						icon.addClass(iconSuccess);
+						$('input').val("");
+						input.trigger('input');
+						message.text(settings.msgSuccess);
 						}
 					}
 					

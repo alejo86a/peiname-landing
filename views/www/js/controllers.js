@@ -51,4 +51,16 @@ app.controller('ContactController', function ($scope, $http) {
             $scope.result='bg-danger';
         }
     }
+})
+.controller('asesoresController', function($scope, $http){
+    $scope.asesores = [{
+        imagen : 'views/www/img/team1.jpg',
+        nombre : 'edith',
+        cargo : 'marketing',
+        fb : 'https://www.facebook.com/edith.h.tovar.9',
+        twitter : 'https://twitter.com/MentorEDITH',
+        linkedin : '',
+        instagram : ''
+    }];
+    
 });
