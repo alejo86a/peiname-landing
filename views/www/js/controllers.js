@@ -61,6 +61,33 @@ app.controller('ContactController', function ($scope, $http) {
         twitter : 'https://twitter.com/MentorEDITH',
         linkedin : '',
         instagram : ''
+    },{
+        imagen : 'views/www/img/team2.jpg',
+        nombre : 'david',
+        cargo : 'cco',
+        fb : 'https://www.facebook.com/edith.h.tovar.9',
+        twitter : 'https://twitter.com/MentorEDITH',
+        linkedin : 'https://twitter.com/MentorEDITH',
+        instagram : ''
+    },{
+        imagen : 'views/www/img/team3.jpg',
+        nombre : 'jhon',
+        cargo : 'ceo',
+        fb : 'https://www.facebook.com/edith.h.tovar.9',
+        twitter : '',
+        linkedin : 'https://twitter.com/MentorEDITH',
+        instagram : ''
+    },{
+        imagen : 'views/www/img/team4.jpg',
+        nombre : 'elina',
+        cargo : 'ceo',
+        fb : 'https://www.facebook.com/edith.h.tovar.9',
+        twitter : '',
+        linkedin : '',
+        instagram : 'https://twitter.com/MentorEDITH'
     }];
     
+})
+.controller('cRegresivaController', function($scope){
+    $scope.cantidad = parseInt(((new Date("03/13/2016"))-(new Date()))/86400000);
 });

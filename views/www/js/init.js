@@ -134,7 +134,7 @@ function pogody(){
 	});
 	/*Typed js for title tag*/
 	$("#title").typed({
-		strings: ["Hola..!", "Bienvenido..!", "Peinate..!"],
+		strings: ["Peiname", "Hola.. ven!", " Y Peinate..!"],
 		typeSpeed: 300,
 		backDelay: 900,
 		loop: true,

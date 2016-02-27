@@ -51,7 +51,7 @@
 						<div class="col-lg-8 col-md-9 col-sm-9 col-xs-9 align-center content-wrap">
 						
 						<!--Logo-->
-						<div class="logo align-center text-left"><img src="views/www/img/logo-peiname.jpg" alt="logo">
+						<div class="logo align-center text-left"><img src="views/www/img/logo-peiname.png" alt="logo">
 						</div>
 						<!--/Logo-->
 						
@@ -92,10 +92,10 @@
 								
 								<!--CONTENT CHANGED & <br> ADDED-->								
 								<div class="notify-wrap">
-									<h3 class="wellcome-text" data-animation="fadeInLeft" data-animation-delay="900" data-out-animation="fadeOutLeft" data-out-animation-delay="100" data-ng-bind="notify || 'hello..'">Hello..</h3>
+									<h3 class="wellcome-text" data-animation="fadeInLeft" data-animation-delay="900" data-out-animation="fadeOutLeft" data-out-animation-delay="100" data-ng-bind="notify || 'hola..'">Hola..</h3>
 									<form id="notifyMe" class="contact-form" action="notify-me.php" method="post">
 										<div class="input-wrap" data-animation="fadeInLeft" data-animation-delay="100" data-out-animation="fadeOutLeft" data-out-animation-delay="900">
-											<input  data-ng-model="notify" class="col-lg-10  align-center form-control input input__field input__field--hoshi notify-input-box" name="email" placeholder="email id"  type="email">
+											<input  data-ng-model="notify" class="col-lg-10  align-center form-control input input__field input__field--hoshi notify-input-box" name="email" placeholder="Tu correo"  type="email">
 											<label class="input__label input__label--hoshi input__label--hoshi-color-1"></label>
 										</div>	
 										<button type="submit" data-hover="Send" class="btn btn-default progress-button btn-submit " data-animation="fadeInUp" data-animation-delay="900" data-out-animation="fadeOutUp" data-out-animation-delay="1300">
@@ -124,7 +124,7 @@
 										</a>
 									</li>
 								</ul>
-								<p>Camaalu © 2016</p>
+								<p>Peiname © 2016</p>
 							</div>
 						</div>
 						<!--/main content-->
@@ -159,14 +159,14 @@
 						</div>
 						<!--/Contect Nav-->
 						
-						<div class="counter-content">
+						<div class="counter-content" ng-controller="cRegresivaController">
 							<div class="col-lg-8 col-md-9 col-sm-9 col-xs-9 align-center text-left">
 								<p class="tagline">Porque el cambio de look es ya, peiname sabe que es lo mejor para ti.</p>
 								
 								<!--Counter-->
 								<div id="countdown">
 								  <!--<span class="days">20</span>-->
-								  <span class="dayss">20</span>
+								  <span class="dayss">{{cantidad}}</span>
 								</div>
 								<span class="small-hr"></span>
 								<span class="remain-days">Dias para el lanzamiento</span>
@@ -186,7 +186,7 @@
 						<div class="container align-center detail-info">
 							<div class="row">
 								<div class="col-lg-3 col-md-3 col-sm-3">
-									<h3>About</h3>
+									<h3>Informaciòn</h3>
 								</div>	
 								<div class="col-lg-9 col-md-8 col-sm-8 col-xs-9">
 									<p class="tagline">Porque el cambio de look es ya, peiname sabe que es lo mejor para ti.</p>
@@ -244,135 +244,41 @@
 								</div>	
 								<!--Team Slider-->
 								<div class="col-lg-offset-3 col-md-offset-3 col-sm-offset-3 col-lg-7 col-md-8 col-sm-8 col-xs-9 team-sec" ng-controller="asesoresController">
-									<p class="tagline">Our Team{{5+5}}</p>
+									<p class="tagline">Our Team {{asesores[0].nombre}}</p>
 									<span class="small-hr"></span>
 									<div id="team">
 										<div class="team"> 
-											<div class="item">
+											<div class="item"  ng-repeat="a in asesores">
 												<div class="team-img-wrap">
-													<img src="views/www/img/team1.jpg" alt="team1">
+													<img  alt="team1" ng-src="{{a.imagen}}">
 													<div class="team-overlay">
 														<ul class="social-icons">
 															<li>
-																<a href="" class="social-icon">
+																<a href="" class="social-icon" ng-show="{{a.fb!=''}}">
 																	<i class="fa fa-facebook"></i>
 																</a>
 															</li>
 															<li>
-																<a href="" class="social-icon">
+																<a href="" class="social-icon" ng-show="{{a.twitter!=''}}">
 																	<i class="fa fa-twitter"></i>
 																</a>
 															</li>
 															<li>
-																<a href="" class="social-icon">
+																<a href="" class="social-icon" ng-show="{{a.linkedin!=''}}">
 																	<i class="fa fa-linkedin"></i>
 																</a>
 															</li>
 															<li>
-																<a href="" class="social-icon">
-																	<i class="fa fa-behance"></i>
+																<a href="" class="social-icon" ng-show="{{a.instagram!=''}}">
+																	<i class="fa fa-instagram"></i>
 																</a>
 															</li>
 														</ul>
 													</div>
 												</div>	
-												<span class="name"> marry</span>
-												<span class="desg"> ceo											</span>
+												<span class="name">{{a.nombre}}</span>
+												<span class="desg">{{a.cargo}}</span>
 											</div>
-											<div class="item" >
-												<div class="team-img-wrap">
-													<img src="views/www/img/team2.jpg" alt="team1">
-													<div class="team-overlay">
-														<ul class="social-icons">
-															<li>
-																<a href="" class="social-icon">
-																	<i class="fa fa-facebook"></i>
-																</a>
-															</li>
-															<li>
-																<a href="" class="social-icon">
-																	<i class="fa fa-twitter"></i>
-																</a>
-															</li>
-															<li>
-																<a href="" class="social-icon">
-																	<i class="fa fa-linkedin"></i>
-																</a>
-															</li>
-															<li>
-																<a href="" class="social-icon">
-																	<i class="fa fa-behance"></i>
-																</a>
-															</li>
-														</ul>
-													</div>
-												</div>	
-												<span class="name"> david</span>
-												<span class="desg"> coo											</span>
-											</div>
-											<div class="item" >
-												<div class="team-img-wrap">
-													<img src="views/www/img/team3.jpg" alt="team1">
-													<div class="team-overlay">
-														<ul class="social-icons">
-															<li>
-																<a href="" class="social-icon">
-																	<i class="fa fa-facebook"></i>
-																</a>
-															</li>
-															<li>
-																<a href="" class="social-icon">
-																	<i class="fa fa-twitter"></i>
-																</a>
-															</li>
-															<li>
-																<a href="" class="social-icon">
-																	<i class="fa fa-linkedin"></i>
-																</a>
-															</li>
-															<li>
-																<a href="" class="social-icon">
-																	<i class="fa fa-behance"></i>
-																</a>
-															</li>
-														</ul>
-													</div>
-												</div>	
-												<span class="name"> john</span>
-												<span class="desg"> ceo											</span>
-											</div>
-											<div class="item" >
-												<div class="team-img-wrap">
-													<img src="views/www/img/team4.jpg" alt="team1">
-													<div class="team-overlay">
-														<ul class="social-icons">
-															<li>
-																<a href="" class="social-icon">
-																	<i class="fa fa-facebook"></i>
-																</a>
-															</li>
-															<li>
-																<a href="" class="social-icon">
-																	<i class="fa fa-twitter"></i>
-																</a>
-															</li>
-															<li>
-																<a href="" class="social-icon">
-																	<i class="fa fa-linkedin"></i>
-																</a>
-															</li>
-															<li>
-																<a href="" class="social-icon">
-																	<i class="fa fa-behance"></i>
-																</a>
-															</li>
-														</ul>
-													</div>
-												</div>	
-												<span class="name"> elina</span>
-												<span class="desg"> ceo											</span>
-											</div>
-										
 										</div>
 									</div>
 								</div>	
@@ -429,7 +335,7 @@
 								</div>
 								<div class="col-lg-3 col-md-offset-1 col-md-5 col-sm-offset-1 col-sm-5 col-xs-9">
 									<div class="align-center address-detail">
-									<p>Calle 00 # 00-00,<br/>Medellin, Antioquia</p>
+									<!--<p>Calle 00 # 00-00,<br/>Medellin, Antioquia</p>-->
 									<div class="icon col-lg-2 col-md-2 col-sm-2 col-xs-1"><i class="fa fa-phone"></i></div>
 									<div class="col-lg-10 col-md-10 col-sm-10 col-xs-11 pad-left-zero">
 										<a href="callto:954788315970" target="_blank">+57 313-708-1557</a>
@@ -440,18 +346,18 @@
 									</div>
 									<div class="icon col-lg-2 col-md-2 col-sm-2 col-xs-1"><i class="fa fa-envelope"></i></div>
 									<div class="col-lg-10 col-md-10 col-sm-10 col-xs-11 pad-left-zero">
-										<a href="mailto:hello@theme-nerds.com" target="_blank">peiname@gmail.com</a>
+										<a href="peiname@gmail.com" target="_blank">peiname@gmail.com</a>
 									</div>
 									<div class="col-lg-12  pad-left-zero map">
-									<a class="" href="https://www.google.com/maps/d/viewer?mid=z_gdBE8F4CM4.kd855LF8lFPo&amp;hl=en_US" target="_blank">
-										<span class="">get direction</span><span class="go-arrow"></span>
+									<a class="" href="https://www.google.com/maps/d/u/0/viewer?mid=zXX9TgrDttvE.k3tnxzDVq3T8&hl=en_US" target="_blank">
+										<span class="">Ver ubicacion</span><span class="go-arrow"></span>
 									</a>	
 									</div>
 								</div>
 							
 								</div>		
 								<!--Google Map-->
-								<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d387157.48218081944!2d-73.97968099999999!3d40.703312749999995!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x89c24fa5d33f083b%3A0xc80b8f06e177fe62!2sNew+York%2C+NY%2C+USA!5e0!3m2!1sen!2sin!4v1441524964182" width="100%" height="450" frameborder="0" style="border:0" allowfullscreen></iframe>
+								<!--<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d387157.48218081944!2d-73.97968099999999!3d40.703312749999995!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x89c24fa5d33f083b%3A0xc80b8f06e177fe62!2sNew+York%2C+NY%2C+USA!5e0!3m2!1sen!2sin!4v1441524964182" width="100%" height="450" frameborder="0" style="border:0" allowfullscreen></iframe>-->
 								<!--/Google Map-->
 							</div>
 							</div>
