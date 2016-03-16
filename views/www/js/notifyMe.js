@@ -50,7 +50,7 @@
 	
 				$.ajax({
 					type: "POST",
-					url: "https://peiname.me/api/correos/create",
+					url: "http://peiname.me/api/correos/create",
 					data: {email: email},
 					dataType: "json",
 					error: function(data){
