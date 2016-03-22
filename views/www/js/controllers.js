@@ -89,5 +89,5 @@ app.controller('ContactController', function ($scope, $http) {
     
 })
 .controller('cRegresivaController', function($scope){
-    $scope.cantidad = parseInt(((new Date("03/13/2016"))-(new Date()))/86400000);
+    $scope.cantidad = parseInt(((new Date("03/31/2016"))-(new Date()))/86400000);
 });
