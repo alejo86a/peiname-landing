@@ -123,19 +123,8 @@ function pogody(){
 	
 	/*Typed js*/
 	$("#typed").typed({
-		strings: [" Prueba - Motivate ", " Califica - Comparte ", " Cambia de look "],
+		strings: [" Prueba - Motivate ", " Califica - Comparte ", "Asesorate" , " Cambia de look "],
 		typeSpeed: 100,
-		backDelay: 900,
-		loop: true,
-		cursorChar: "|",
-		contentType: 'html', // or text
-		// defaults to false for infinite loop
-		loopCount: false
-	});
-	/*Typed js for title tag*/
-	$("#title").typed({
-		strings: ["Peiname", "Hola.. ven!", " Y Peinate..!"],
-		typeSpeed: 300,
 		backDelay: 900,
 		loop: true,
 		cursorChar: "|",
